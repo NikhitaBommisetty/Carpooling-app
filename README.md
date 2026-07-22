@@ -1,5 +1,6 @@
 # 🚗 RideSharing Application — Project Documentation
 ![CI](https://github.com/NikhitaBommisetty/Carpooling-app/actions/workflows/ci.yml/badge.svg)
+---
 A full-stack ride-sharing web application where **Drivers** can create trips and manage vehicles, and **Riders** can search for trips, book seats, and make payments. The system features JWT-based role authentication, automatic booking expiration, and a complete payment lifecycle.
 
 ---
