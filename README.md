@@ -47,36 +47,60 @@ Every push to the `main` branch automatically triggers:
 ## 2. Directory Structure
 
 ```
-Project_main_zip/
-├── README.md                   ← You are here
-├── app.py                      # Flask backend – all API routes (688 lines)
-├── DatabaseSchema.sql          # MySQL table definitions (8 tables)
-├── Insert_values.sql           # Seed data for roles & trip statuses
+## 📂 Project Structure
+
+```
+Carpooling-app-main/
+│
+├── README.md                       # Project documentation
+├── app.py                          # Flask backend – all API routes and business logic
+├── requirements.txt                # Python dependencies
+├── DatabaseSchema.sql              # MySQL table definitions
+├── Insert_values.sql               # Seed data for roles and trip statuses
+│
+├── tests/
+│   └── test_app.py                 # Backend test cases using pytest
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml                  # GitHub Actions CI pipeline
+│
 └── Frontend/
-    ├── package.json            # React project configuration & dependencies
+    │
+    ├── package.json                # React project configuration and dependencies
+    ├── package-lock.json           # Locked npm dependency versions
+    │
     ├── public/
-    │   ├── index.html          # HTML shell template
-    │   └── favicon.ico         # Browser tab icon
+    │   ├── index.html              # HTML template
+    │   └── favicon.ico             # Browser favicon
+    │
     └── src/
-        ├── index.js            # React entry point – renders <App />
-        ├── index.css           # Global stylesheet (139 lines)
-        ├── App.js              # Main component – defines all routes
-        ├── api.js              # Axios instance (baseURL: http://127.0.0.1:5000)
+        │
+        ├── index.js                # React application entry point
+        ├── index.css               # Global stylesheet
+        ├── App.js                  # Main component and route configuration
+        ├── api.js                  # Axios instance for backend communication
+        │
         ├── components/
-        │   └── Navbar.js       # Navigation bar – shows links based on user role
+        │   └── Navbar.js           # Role-based navigation component
+        │
         └── pages/
-            ├── Home.js             # Landing page with register/login buttons
-            ├── Login.js            # Email + password login form
-            ├── RegisterDriver.js   # Driver registration (with license details)
-            ├── RegisterRider.js    # Rider registration (with emergency contact)
-            ├── DriverDashboard.js  # Driver stats: earnings, today's & upcoming trips
-            ├── RiderDashboard.js   # Trip search form with results & booking
-            ├── CreateTrip.js       # Create trip form + vehicle management panel
-            ├── DriverTrips.js      # Driver's trip list with cancel functionality
-            ├── DriverBookings.js   # Read-only view of bookings on driver's trips
-            ├── MyBookings.js       # Rider's bookings list with cancel option
-            ├── TripBooking.js      # Seat selection + 30-second timed payment
-            └── TripSearch.js       # (Commented out – functionality moved to RiderDashboard)
+            │
+            ├── Home.js                 # Landing page
+            ├── Login.js                # User login page
+            ├── RegisterDriver.js       # Driver registration with license details
+            ├── RegisterRider.js        # Rider registration with emergency contact
+            │
+            ├── DriverDashboard.js      # Driver statistics and trip overview
+            ├── CreateTrip.js            # Create trips and manage vehicles
+            ├── DriverTrips.js           # Driver trip management
+            ├── DriverBookings.js        # View bookings for driver trips
+            │
+            ├── RiderDashboard.js        # Search and view available trips
+            ├── TripBooking.js           # Seat booking and payment workflow
+            ├── MyBookings.js            # Rider booking history and cancellation
+            │
+            └── TripSearch.js            # Deprecated component (functionality moved)
 ```
 
 ---
