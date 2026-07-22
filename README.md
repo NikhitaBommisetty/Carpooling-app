@@ -46,7 +46,6 @@ Every push to the `main` branch automatically triggers:
 
 ## 2. Directory Structure
 
-```
 ## 📂 Project Structure
 
 ```
@@ -102,9 +101,6 @@ Carpooling-app-main/
             │
             └── TripSearch.js            # Deprecated component (functionality moved)
 ```
-
----
-
 ## 3. Database Schema
 
 ### 3.1 Tables Overview
