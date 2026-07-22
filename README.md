@@ -26,8 +26,23 @@ A full-stack ride-sharing web application where **Drivers** can create trips and
 | **Backend**   | Python Flask, Flask-JWT-Extended, Flask-CORS          |
 | **Database**  | MySQL (`RideSharingDB`)                              |
 | **Scheduler** | APScheduler (auto-cancels expired bookings every 10s) |
+| **CI/CD**     | GitHub Actions                                       |
 
 ---
+## CI/CD Pipeline
+
+This project uses GitHub Actions for Continuous Integration (CI).
+
+Every push to the `main` branch automatically triggers:
+
+### Backend Validation
+- Installs Python dependencies from `requirements.txt`
+- Runs automated tests using `pytest`
+
+### Frontend Validation
+- Installs Node.js dependencies
+- Creates a production React build using `npm run build`
+
 
 ## 2. Directory Structure
 
@@ -1012,7 +1027,7 @@ This creates all 8 tables and inserts:
 
 ```bash
 # Install Python dependencies
-pip install flask flask-jwt-extended flask-cors mysql-connector-python apscheduler
+pip install -r requirements.txt
 
 # ⚠️ Update MySQL credentials in app.py (lines 22-27):
 #   host="localhost"
@@ -1065,5 +1080,3 @@ npm start
 | 10 | **No pagination**         | Trip and booking lists return all records. Add pagination for scalability.                       |
 
 ---
-
-*Documentation generated on 2026-06-27. Covers all 4 backend files and 16 frontend files.*
