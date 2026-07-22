@@ -123,8 +123,6 @@ Defines user roles in the system.
 | 1       | Rider     |
 | 2       | Driver    |
 
-> ⚠️ **Important:** In the backend code (`app.py`), `role_id = 1` is treated as **Driver** and `role_id = 2` as **Rider**. The frontend sends `role_id: 1` for driver registration and `role_id: 2` for rider registration. Ensure the `INSERT` order in `Insert_values.sql` matches what the code expects, or adjust accordingly.
-
 ---
 
 ### 3.3 Table: `User`
